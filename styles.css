@@ -958,6 +958,10 @@ section {
   background: linear-gradient(135deg, rgba(180, 120, 60, 0.2) 0%, rgba(245, 158, 11, 0.12) 100%);
   border-bottom: 1px solid rgba(180, 120, 60, 0.2);
 }
+.project-image--cooking {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.15) 0%, rgba(245, 158, 11, 0.12) 100%);
+  border-bottom: 1px solid rgba(239, 68, 68, 0.15);
+}
 
 .project-image-icon {
   font-size: 4rem;
