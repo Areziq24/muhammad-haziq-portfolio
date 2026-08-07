@@ -12,8 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const phrases = [
     'Web Developer',
     'Systems Analyst',
-    'UI/UX Enthusiast',
-    'Database Designer',
+    'Information Analyst',
+    'UI/UX Designer',
+    'Database Specialist',
+    'Content Strategist',
     'Problem Solver'
   ];
   let phraseIndex = 0;
