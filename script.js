@@ -292,3 +292,39 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+// ============================================
+// PROJECT FILTER FUNCTION (global)
+// ============================================
+function filterProjects(filter, btn) {
+  // Update active button
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  const cards = document.querySelectorAll('#projectsGrid .project-card');
+
+  cards.forEach(card => {
+    const categories = card.getAttribute('data-category') || '';
+    const matches = filter === 'all' || categories.includes(filter);
+
+    if (matches) {
+      card.style.display = '';
+      // Trigger fade-in
+      requestAnimationFrame(() => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        requestAnimationFrame(() => {
+          card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        });
+      });
+    } else {
+      card.style.transition = 'opacity 0.25s ease';
+      card.style.opacity = '0';
+      setTimeout(() => {
+        card.style.display = 'none';
+      }, 250);
+    }
+  });
+}

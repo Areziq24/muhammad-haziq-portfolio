@@ -87,7 +87,7 @@
             <div class="stat-label">Dean's List</div>
           </div>
           <div class="stat-item">
-            <div class="stat-number">3+</div>
+            <div class="stat-number">5</div>
             <div class="stat-label">Projects Built</div>
           </div>
         </div>
@@ -236,89 +236,204 @@
         <p class="section-subtitle">A curated selection of real-world and academic projects showcasing end-to-end development and design capabilities.</p>
       </div>
 
-      <div class="projects-grid">
-        <!-- Project 1: Business Management System -->
-        <div class="project-card reveal delay-1">
-          <div class="project-image">
-            <span class="project-image-icon">🏢</span>
+      <!-- Filter Tabs -->
+      <div class="project-filters reveal" style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-bottom:40px;">
+        <button class="filter-btn active" data-filter="all" onclick="filterProjects('all', this)">All Projects</button>
+        <button class="filter-btn" data-filter="client" onclick="filterProjects('client', this)">Client</button>
+        <button class="filter-btn" data-filter="academic" onclick="filterProjects('academic', this)">Academic</button>
+        <button class="filter-btn" data-filter="web" onclick="filterProjects('web', this)">Web App</button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- Project 1: Codi Printing House -->
+        <div class="project-card reveal delay-1" data-category="client web">
+          <div class="project-image project-image--codi">
+            <span class="project-image-icon">🖨️</span>
             <span class="project-type-badge badge-client">Client Project</span>
+            <div class="project-hover-overlay">
+              <a href="https://github.com/Areziq24/Codi-Printing-House-" target="_blank" class="project-overlay-btn">View on GitHub →</a>
+            </div>
           </div>
           <div class="project-content">
-            <h3>Business Management System</h3>
+            <div class="project-title-row">
+              <h3>Codi Printing House</h3>
+              <span class="project-year">2025</span>
+            </div>
             <p>
-              Designed and developed a web-based business management system for a local t-shirt printing business. Built a relational database with CRUD functionality for efficient operations. Applied SDLC methodology from requirement gathering to testing and deployment. Improved workflow and data management through a centralized system.
+              Full-stack business management system built for a real local t-shirt printing business. Features product catalog, order management, CRUD operations with MySQL, and a clean admin dashboard. Applied SDLC methodology from requirement gathering to deployment.
             </p>
             <div class="project-tech">
               <span class="tech-tag">PHP</span>
               <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">HTML/CSS</span>
               <span class="tech-tag">JavaScript</span>
               <span class="tech-tag">SDLC</span>
               <span class="tech-tag">CRUD</span>
             </div>
             <div class="project-links">
-              <a href="#" class="project-link" target="_blank">
-                <span>📂</span> GitHub
+              <a href="https://github.com/Areziq24/Codi-Printing-House-" class="project-link project-link-github" target="_blank" rel="noopener noreferrer">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="display:inline-block;vertical-align:middle;margin-right:6px;"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                GitHub Repo
               </a>
-              <a href="#" class="project-link" target="_blank">
+              <a href="https://areziq24.github.io/Codi-Printing-House-/" class="project-link project-link-demo" target="_blank" rel="noopener noreferrer">
                 <span>🔗</span> Live Demo
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Project 2: eClinic Queue Management System -->
-        <div class="project-card reveal delay-2">
-          <div class="project-image">
-            <span class="project-image-icon">🏥</span>
+        <!-- Project 2: Unifine -->
+        <div class="project-card reveal delay-2" data-category="academic web">
+          <div class="project-image project-image--unifine">
+            <span class="project-image-icon">🎓</span>
             <span class="project-type-badge badge-academic">Academic</span>
+            <div class="project-hover-overlay">
+              <a href="https://github.com/Areziq24/Unifine" target="_blank" class="project-overlay-btn">View on GitHub →</a>
+            </div>
           </div>
           <div class="project-content">
-            <h3>eClinic Queue Management System</h3>
+            <div class="project-title-row">
+              <h3>Unifine</h3>
+              <span class="project-year">2025</span>
+            </div>
             <p>
-              Developed a responsive web application for clinic queue management. Implemented CRUD operations with MySQL database integration for patient queue tracking and appointment scheduling. Enhanced user experience through interface optimization and usability testing.
+              A university fine management web system that allows students to view, manage, and pay outstanding fines online. Designed with a clean dashboard interface, admin panel for staff, and integrated database for real-time fine records tracking.
             </p>
             <div class="project-tech">
-              <span class="tech-tag">HTML5</span>
-              <span class="tech-tag">CSS3</span>
-              <span class="tech-tag">JavaScript</span>
               <span class="tech-tag">PHP</span>
               <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">HTML/CSS</span>
+              <span class="tech-tag">JavaScript</span>
               <span class="tech-tag">CRUD</span>
             </div>
             <div class="project-links">
-              <a href="#" class="project-link" target="_blank">
-                <span>📂</span> GitHub
+              <a href="https://github.com/Areziq24/Unifine" class="project-link project-link-github" target="_blank" rel="noopener noreferrer">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="display:inline-block;vertical-align:middle;margin-right:6px;"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                GitHub Repo
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Project 3: GuideMe Campus Navigation -->
-        <div class="project-card reveal delay-3">
-          <div class="project-image">
-            <span class="project-image-icon">🧭</span>
-            <span class="project-type-badge badge-uiux">UI/UX Design</span>
+        <!-- Project 3: Intern Tracker -->
+        <div class="project-card reveal delay-3" data-category="academic web">
+          <div class="project-image project-image--intern">
+            <span class="project-image-icon">📋</span>
+            <span class="project-type-badge badge-academic">Academic</span>
+            <div class="project-hover-overlay">
+              <a href="https://github.com/Areziq24/intern-tracker" target="_blank" class="project-overlay-btn">View on GitHub →</a>
+            </div>
           </div>
           <div class="project-content">
-            <h3>GuideMe — Campus Navigation</h3>
+            <div class="project-title-row">
+              <h3>Intern Tracker</h3>
+              <span class="project-year">2026</span>
+            </div>
             <p>
-              Designed interactive wireframes and prototypes for a campus navigation mobile application using Figma. Conducted usability testing and refined design based on real user feedback. Applied UI/UX principles to create an intuitive and accessible user experience for students navigating a large university campus.
+              An internship management portal for students and supervisors to track daily logs, tasks, and progress throughout the industrial training period. Features role-based access, submission tracking, and report generation for efficient internship management.
             </p>
             <div class="project-tech">
-              <span class="tech-tag">Figma</span>
-              <span class="tech-tag">Wireframing</span>
-              <span class="tech-tag">Prototyping</span>
-              <span class="tech-tag">Usability Testing</span>
-              <span class="tech-tag">UI/UX Design</span>
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">GitHub Pages</span>
+              <span class="tech-tag">SDLC</span>
             </div>
             <div class="project-links">
-              <a href="#" class="project-link" target="_blank">
-                <span>🎨</span> Figma Prototype
+              <a href="https://github.com/Areziq24/intern-tracker" class="project-link project-link-github" target="_blank" rel="noopener noreferrer">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="display:inline-block;vertical-align:middle;margin-right:6px;"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                GitHub Repo
+              </a>
+              <a href="https://areziq24.github.io/intern-tracker/" class="project-link project-link-demo" target="_blank" rel="noopener noreferrer">
+                <span>🔗</span> Live Demo
               </a>
             </div>
           </div>
         </div>
+
+        <!-- Project 4: FamiQuest (FamilyMart) -->
+        <div class="project-card reveal delay-1" data-category="academic web">
+          <div class="project-image project-image--fami">
+            <span class="project-image-icon">🏪</span>
+            <span class="project-type-badge badge-academic">Academic</span>
+            <div class="project-hover-overlay">
+              <a href="https://github.com/Areziq24/FamiQuest" target="_blank" class="project-overlay-btn">View on GitHub →</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-title-row">
+              <h3>FamiQuest</h3>
+              <span class="project-year">2026</span>
+            </div>
+            <p>
+              A gamified FamilyMart loyalty & quest system web app that rewards customers for purchases. Features an interactive quest board, point collection, level-up mechanics, and reward redemption — applying gamification principles studied in academic coursework.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Gamification</span>
+              <span class="tech-tag">UI/UX</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Areziq24/FamiQuest" class="project-link project-link-github" target="_blank" rel="noopener noreferrer">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="display:inline-block;vertical-align:middle;margin-right:6px;"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                GitHub Repo
+              </a>
+              <a href="https://areziq24.github.io/FamiQuest/" class="project-link project-link-demo" target="_blank" rel="noopener noreferrer">
+                <span>🔗</span> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: SognoCoffee -->
+        <div class="project-card reveal delay-2" data-category="client web">
+          <div class="project-image project-image--sogno">
+            <span class="project-image-icon">☕</span>
+            <span class="project-type-badge badge-client">Client Project</span>
+            <div class="project-hover-overlay">
+              <a href="https://github.com/Areziq24/SognoCoffee" target="_blank" class="project-overlay-btn">View on GitHub →</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-title-row">
+              <h3>Sogno Coffee</h3>
+              <span class="project-year">2025</span>
+            </div>
+            <p>
+              A premium café website and digital menu system for Sogno Coffee. Showcases the menu, brand story, and location with a modern, elegant design. Built with smooth animations and a warm aesthetic that reflects the café's artisanal identity.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Responsive Design</span>
+              <span class="tech-tag">UI/UX</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Areziq24/SognoCoffee" class="project-link project-link-github" target="_blank" rel="noopener noreferrer">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="display:inline-block;vertical-align:middle;margin-right:6px;"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                GitHub Repo
+              </a>
+              <a href="https://areziq24.github.io/SognoCoffee/" class="project-link project-link-demo" target="_blank" rel="noopener noreferrer">
+                <span>🔗</span> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
       </div>
+
+      <!-- GitHub Profile CTA -->
+      <div class="reveal" style="text-align:center; margin-top:48px;">
+        <a href="https://github.com/Areziq24" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="display:inline-flex; align-items:center; gap:10px;">
+          <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+          View All Projects on GitHub
+        </a>
+      </div>
+
     </div>
   </section>
 
@@ -935,7 +1050,7 @@
             <a href="https://linkedin.com/in/muhammad-haziq-shafee-b12059280" class="social-link" target="_blank" aria-label="LinkedIn" title="LinkedIn">
               🔗
             </a>
-            <a href="#" class="social-link" target="_blank" aria-label="GitHub" title="GitHub">
+            <a href="https://github.com/Areziq24" class="social-link" target="_blank" aria-label="GitHub" title="GitHub">
               📂
             </a>
             <a href="mailto:haziqshafee04@gmail.com" class="social-link" target="_blank" aria-label="Email" title="Email">
